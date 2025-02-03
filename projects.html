@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelina Yee</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="angie.js" defer></script>
+  <style> body{font-family:Georgia, serif;} </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#more">Upcoming</a></li>
+            </ul>
+            <h1>Anything New Soon?</h1>
+        </nav>
+    </header>
+    <main>
+        <section id="more">
+            <h3>Upcoming Project #1</h3>
+            <h4>LaLaLounge</h4>
+            <audio controls>
+                <source src="audios/music.mp3" type = "audio/mpeg">
+                Your browser does not support the audio element. 
+            </audio>
+            <h5>What is it?</h5>
+            <p><dfn>LaLaLounge</dfn> is a web application that is currently in process.</p>
+            <p>The audio is one of the many type of sounds and music I listen to when I study.
+                Hence, the idea is to create a website to play soft and melodic sounds according 
+                to a specific location that the user might want. For example, a user might be working in 
+                their dorm room, but finds it hard to focus since they usually study at a cafe and thinks 
+                that they would focus more there. By using this website, users can imagine as if they are in a cafe
+                and have sounds like baristas or coffee brewing added to the default melodic music. 
+            </p>
+            <h5>Included features:</h5>
+            <ol>
+                <li>Slider to adjust sound volume</li>
+                <li>A range of themes from cafe to underwater library</li>
+                <li>A clock and timer (optional for user)</li>
+                <li>A checkbox to add or remove some sounds</li>
+            </ol>
+            <h5>Color Palette</h5>
+            <canvas id="Canvas">Your browser does not support the canvas tag.</canvas>
+            <script>
+                const c=document.getElementById("Canvas");
+                const a= c.getContext("2d");
+                a.fillStyle="darkgreen";
+                a.fillRect(20, 20, 75, 50);
+                a.fillStyle="lightskyblue";
+                a.fillRect(50, 50, 75, 50);
+                a.fillStyle="mistyrose";
+                a.fillRect(80, 80, 75, 50);
+            </script>
+            <br>
+            <template>
+                <form action="/submit" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id = "email" name="email">
+                    <input type="submit" value="submit">
+                </form>
+            </template>
+        </section>
+        <section id="project 2">
+            <video controls>
+                <source src="audios/videoplayback.mp4" type = "video/mp4">
+                Your browser does not support the audio element.
+            </video>
+            <h5>What is it?</h5>
+            <p><dfn>Rock-Paper-Scissor-MinusONE</dfn> is a web application that is currently in process.</p>
+            <p>The video shows a scene from Squid Game Season 2. In the scene, the characters can be seen playing a rather
+                violent game of Rock-Paper-Scissor-MinusONE. This is a popular game in korea that my friends and I have started to play
+                to increase the intensity of regular rock paper scissor. Therefore, my friend and I have decided to make it into a game 
+                that others can play with their friends as well!
+            </p>
+            <h5>Included features:</h5>
+            <ol>
+                <li>Play with computer mode</li>
+                <li>Two people play on the same computer</li>
+                <li>Share link with a friend and play</li>
+            </ol>
+            <template>
+                <form action="/submit" method="post">
+                    <label for="email">Email:</label>
+                    <input type="email" id = "email" name="email">
+                    <input type="submit" value="submit">
+                </form>
+            </template>
+            
+        </section>
+        <dialog open>Do you have some time for feedback? Continue scrolling or press <kbd>SpaceBar</kbd>!</dialog>
+        <br>
+        <hr>
+    </main>
+    <footer>
+        <h2>Time for some feedback!</h2>
+        <h4>It would really help me!</h4>
+        <fieldset>
+            <legend>Which one seems more interesting?</legend>
+            <label><input type="checkbox" name ="one" value="one">LaLaLounge</label>
+            <label><input type="checkbox" name ="two" value="two">Rock-Paper-Scissor-MinusONE</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>What else would you like to see?</legend>
+            <textarea>
+                Enter text here...
+            </textarea>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>How did you get here?</legend>
+            <input list="options" name="options">
+            <datalist id="options">
+                <option value="application"></option>
+                <option value="word of mouth"></option>
+                <option value="project submission"></option>
+                <option value="professional website"></option>
+            </datalist>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Rate your experience!</legend>
+            <select>
+                <optgroup label="Good">
+                    <option value="6">The BEST!</option>
+                    <option value="5">I had fun!</option>
+                </optgroup>
+                <optgroup label="Okay">
+                    <option value="4">It's okay!</option>
+                    <option value="3">Meh...</option>
+                </optgroup>
+                <optgroup label="Bad">
+                    <option value="2">Noting special!</option>
+                    <option value="1">The WORST!</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <button type="button">Submit!</button>
+        <noscript>Your browser does not support JavaScript!</noscript>
+    </footer>
+
+</body>
+</html>
