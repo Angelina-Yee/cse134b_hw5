@@ -20,47 +20,46 @@
                     </form>
                 </search>
             </ul>
-            <h1>Angelina Yee</h1>
         </nav>
+        <h1>Angelina Yee</h1>
+        <h3>Undergraduate at UCSD</h3>
     </header>
     <main>
-        <section id="home">
-            <h2>Hello!</h2>
-            <hgroup>
-                <h3>Are you ready to learn more about Angelina?</h3>
-                <h4>Buckle Up!</h4>
-            </hgroup>
-            <hr>
-        </section>
         <section id="about">
-            <figure>
-                <img src="images/ange.png">
-                <figcaption>This is <em>me!</em></figcaption>
-            </figure>
+            <picture id="pic">
+                <figure>
+                    <img src="images/ange.png" alt="A picture of me near the buildings of Sixth College at UCSD.">
+                    <figcaption id="cap">This is <em>me!</em></figcaption>
+                </figure>
+            </picture>
             <h2>About Me</h2>
             <div>
                 <p>I am currently an internation student studying at UCSD, with a major in Computer Science and a focus in Front-End Development. </p>
-                
-                
             </div>
         </section>
         <aside>
             <hr>
-            <h3>Contact Me</h3>
+            <h2>Contact Me</h2>
             <ul>
-                <li><a href="https://www.linkedin.com/in/yun-shwe-yee-b26997217/">LinkedIn</a>></li>
-                <li><a href="https://github.com/Angelina-Yee">Github</a></li>
-                <li><address>Email: <a href="mailto:yyee@ucsd.edu">yyee@ucsd.edu</a></address></li>
+                <li id="one"><a href="https://www.linkedin.com/in/yun-shwe-yee-b26997217/">LinkedIn</a></li>
+                <li id="two"><a href="https://github.com/Angelina-Yee">Github</a></li>
+                <li id="three"><address>Email: <a href="mailto:yyee@ucsd.edu">yyee@ucsd.edu</a></address></li>
             </ul>
             <hr>
             <br>
         </aside>
         <section id="portfolio">
+            <style scoped>
+                h2{
+                    text-decoration: underline;
+                }
+            </style>
             <h2>Projects</h2>
             <article>
                 <svg width="100" height="100">
                     <circle cx="50" cy="50" r="40" stroke="black" fill="darkblue" />
                 </svg>
+                
                 <h3>Triton Circles</h3>
                  <ul>
                     <li>A class group project, consisting of five members, with the main objective of developing a web application to encourage UCSD students’ involvement in student organizations and clubs at UCSD.</li>
@@ -88,12 +87,13 @@
                 <br>
             </article>
             <article>
-                <h3>Are you curious for more?</h3>
+                <h2>Are you curious for more?</h2>
                 <iframe src="projects.html"></iframe>
             </article>
             <hr>
         </section>
-        <section id="Club Experiences">
+        <section id="ClubExperiences">
+            <h2>Club & Leadership Experiences</h2>
             <h3><abbr title="Computer Science and Engineering">CSES</abbr></h3>
             <details>
                 <summary>Marketing Chair to Director <i>(November-June)</i>, Finance Director <i>(Current)</i></summary>
@@ -136,8 +136,8 @@
             </tr>
         </table>
         <br>
-        <details>
-            <Summary><code>Need some motivation?</code></Summary>
+        <details id="sum">
+            <Summary><code>Getting All Personal...</code></Summary>
             Computer Science has always been a <span id="highlight">love-hate </span>relationship for me. I love it when my work goes my way and I hate it when it doesn't. 
             It was a major that I had <del>impulsively</del> happily picked because it was a combination of things I had loved. Design, art, creativity, story, and interaction. 
             However, as a third year student, I have realized that only when I continuously work and am intraced in the process, do I appreciate more and more. 

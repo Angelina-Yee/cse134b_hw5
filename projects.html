@@ -14,17 +14,24 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#more">Upcoming</a></li>
+                <search>
+                    <form>
+                        <input name="search" id="search" placeholder="Search...">
+                    </form>
+                </search>
             </ul>
-            <h1>Anything New Soon?</h1>
         </nav>
+        <h1>Anything New Soon?</h1>
     </header>
     <main>
         <section id="more">
-            <h3>Upcoming Project #1</h3>
-            <h4>LaLaLounge</h4>
+            <hgroup>
+                <h2>Upcoming Project #1</h2>
+                <h4>LaLaLounge</h4>
+            </hgroup>
             <audio controls>
                 <source src="audios/music.mp3" type = "audio/mpeg">
-                Your browser does not support the audio element. 
+                Your browser does not support the audio element. The audio plays a soft and melodic tune, fitting for a calm environment.
             </audio>
             <h5>What is it?</h5>
             <p><dfn>LaLaLounge</dfn> is a web application that is currently in process.</p>
@@ -43,7 +50,7 @@
                 <li>A checkbox to add or remove some sounds</li>
             </ol>
             <h5>Color Palette</h5>
-            <canvas id="Canvas">Your browser does not support the canvas tag.</canvas>
+            <canvas id="Canvas">Your browser does not support the canvas tag. The colors shown are dark green, light blue, and misty rose.</canvas>
             <script>
                 const c=document.getElementById("Canvas");
                 const a= c.getContext("2d");
@@ -64,9 +71,13 @@
             </template>
         </section>
         <section id="project 2">
+            <hgroup>
+                <h2>Upcoming Project #2</h2>
+                <h4>Rock-Paper-Scissor-MinusONE</h4>
+            </hgroup>
             <video controls>
                 <source src="audios/videoplayback.mp4" type = "video/mp4">
-                Your browser does not support the audio element.
+                Your browser does not support the audio element. The video shows a scene from season two of the TV show, Squid Game, where two captives play a game of Rock Paper Scissor, minus one. 
             </video>
             <h5>What is it?</h5>
             <p><dfn>Rock-Paper-Scissor-MinusONE</dfn> is a web application that is currently in process.</p>
@@ -96,7 +107,7 @@
     </main>
     <footer>
         <h2>Time for some feedback!</h2>
-        <h4>It would really help me!</h4>
+        <h4>(Just for assignment purposes)</h4>
         <fieldset>
             <legend>Which one seems more interesting?</legend>
             <label><input type="checkbox" name ="one" value="one">LaLaLounge</label>
@@ -138,6 +149,7 @@
                 </optgroup>
             </select>
         </fieldset>
+        <br>
         <button type="button">Submit!</button>
         <noscript>Your browser does not support JavaScript!</noscript>
     </footer>
