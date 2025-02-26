@@ -45,6 +45,18 @@
                 <li id="two"><a href="https://github.com/Angelina-Yee">Github</a></li>
                 <li id="three"><address>Email: <a href="mailto:yyee@ucsd.edu">yyee@ucsd.edu</a></address></li>
             </ul>
+            <form action="https://httpbin.org/post" method="POST" id="contact_form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" required></textarea>
+                <input type="hidden" name="possible_bot" value="true">
+                <button type="submit" id="contact_submit">Submit</button>
+                <output id="error"></output>
+                <output id="info"></output>
+            </form>
             <hr>
             <br>
         </aside>

@@ -168,6 +168,49 @@ button:hover{
     width: 70%;
 }
 
+#contact_form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+}
+
+label{
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="email"], textarea{
+    padding: 8px;
+    margin-top: 5px; 
+    margin-bottom: 10px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+}
+
+#contact_submit{
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.required{
+    color: red;
+}
+
+output{
+    font-size: 0.9em;
+}
+
+#error{
+    color: rgb(142, 0, 0);
+}
+
+#info{
+    color: green;
+}
+
 @media (max-width: 350px){
     img{
         margin-top: -20px;
