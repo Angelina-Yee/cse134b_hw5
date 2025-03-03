@@ -195,8 +195,20 @@ input[type="text"], input[type="email"], textarea{
     margin-top: 20px;
 }
 
-.required{
-    color: red;
+input:required, textarea:required{
+    border: 2px dashed gray;
+}
+
+input:user-invalid, textarea:user-invalid{
+    border: 2px solid red;
+}
+
+textarea::placeholder{
+    color: lightgray;
+}
+
+input:valid, textarea:valid{
+    border: 2px solid green;
 }
 
 output{
