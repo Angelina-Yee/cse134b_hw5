@@ -215,6 +215,17 @@ output{
     font-size: 0.9em;
 }
 
+.error-message{
+    color: red;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.warning{
+    color: rgb(225, 146, 0);
+    font-weight: bolder;
+}
+
 #error{
     color: rgb(142, 0, 0);
 }
