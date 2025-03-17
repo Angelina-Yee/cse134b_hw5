@@ -1,0 +1,19 @@
+{
+    "projects": [
+        {
+            "name": "Upcoming Project #1: LaLaLounge", 
+            "audioSrc": "audios/music.mp3", 
+            "altText": "Audio that plays a soft melodic tune.",
+            "imageSrc": "images/lala.png",
+            "imgText": "Concept image of the characters in the design of the web application.",
+            "description": "A web application that is currently in progress. The attached audio is one of the many type of sounds and music I listen to when I study. Hence, the idea is to create a website to play soft and melodic sounds according to a specific location that the user might want. For example, a user might be working in their dorm room, but finds it hard to focus since they usually study at a cafe and thinks that they would focus more there. By using this website, users can imagine as if they are in a cafe and have sounds like baristas or coffee brewing added to the default melodic music.",
+        },
+        {
+            "name": "Upcoming Project #2: Rock-Paper-Scissor-MinusONE",
+            "videoSrc": "audios/videoplayback.mp4", 
+            "altText": "A video that shows the game demonstration in the TV show, 'Squid Game'.",
+            "description": "A web game that is currently in progress. The attached video shows a scene from Squid Game Season 2. In the scene, the characters can be seen playing a rather violent game of Rock-Paper-Scissor-MinusONE. This is a popular game in korea that my friends and I have started to play to increase the intensity of regular rock paper scissor. Therefore, my friend and I have decided to make it into a game that others can play with their friends as well!",
+            "url": "https://github.com/nyanaung23/rock-paper-scissors"
+        }
+    ]
+}
