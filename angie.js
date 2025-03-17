@@ -153,6 +153,12 @@ class ProjectCard extends HTMLElement{
 
 customElements.define('project-card', ProjectCard);
 
+document.addEventListener('DOMContentLoaded', () => {
+    const main = document.querySelector('main');
+    const card = new ProjectCard();
+    main.appendChild(card);
+});
+
 //Part 1:
 // document.addEventListener('DOMContentLoaded', function(){
 //     const projectData =[
