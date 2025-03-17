@@ -260,6 +260,16 @@ noscript{
     color: rgb(188, 188, 188);
 }
 
+#loadLocal, #loadRemote{
+    display: inline-block;
+    margin: 5px;
+    font-size: 17px;
+}
+
+#proj_text{
+    font-size: 30px;
+}
+
 
 @media (max-width: 350px){
     img{

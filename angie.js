@@ -153,8 +153,53 @@ class ProjectCard extends HTMLElement{
 
 customElements.define('project-card', ProjectCard);
 
-document.addEventListener('DOMContentLoaded', function(){
-    const projectData =[
+//Part 1:
+// document.addEventListener('DOMContentLoaded', function(){
+//     const projectData =[
+//         {
+//             name: "Upcoming Project #1: LaLaLounge", 
+//             audioSrc: "audios/music.mp3", 
+//             altText: "Audio that plays a soft melodic tune.",
+//             imageSrc: "images/lala.png",
+//             imgText: "Concept image of the characters in the design of the web application.",
+//             description: "A web application that is currently in progress. The attached audio is one of the many type of sounds and music I listen to when I study. Hence, the idea is to create a website to play soft and melodic sounds according to a specific location that the user might want. For example, a user might be working in their dorm room, but finds it hard to focus since they usually study at a cafe and thinks that they would focus more there. By using this website, users can imagine as if they are in a cafe and have sounds like baristas or coffee brewing added to the default melodic music.",
+//         },
+//         {
+//             name: "Upcoming Project #2: Rock-Paper-Scissor-MinusONE",
+//             videoSrc: "audios/videoplayback.mp4", 
+//             altText: "A video that shows the game demonstration in the TV show, 'Squid Game'.",
+//             description: "A web game that is currently in progress. The attached video shows a scene from Squid Game Season 2. In the scene, the characters can be seen playing a rather violent game of Rock-Paper-Scissor-MinusONE. This is a popular game in korea that my friends and I have started to play to increase the intensity of regular rock paper scissor. Therefore, my friend and I have decided to make it into a game that others can play with their friends as well!",
+//             url: "https://github.com/nyanaung23/rock-paper-scissors"
+//         }
+//     ];
+
+//     const mainSection = document.querySelector('main');
+//     projectData.forEach(project => {
+//         const projectCard = document.createElement('project-card');
+//         projectCard.setAttribute('name', project.name);
+//         if(project.audioSrc){
+//             projectCard.setAttribute('audio-src', project.audioSrc);
+//         }
+//         if(project.imageSrc){
+//             projectCard.setAttribute('image-src', project.imageSrc);
+//         }
+//         if(project.videoSrc){
+//             projectCard.setAttribute('video-src', project.videoSrc);
+//         }
+//         projectCard.setAttribute('alt', project.altText);
+//         projectCard.setAttribute('img-alt', project.imgText);
+//         projectCard.setAttribute('description', project.description);
+//         if (project.url){
+//             projectCard.setAttribute('url', project.url);
+//         }
+//         mainSection.appendChild(projectCard);
+//     });
+// });
+
+
+//Part 2:
+function initializeLocalStorage(){
+    const projectData = [
         {
             name: "Upcoming Project #1: LaLaLounge", 
             audioSrc: "audios/music.mp3", 
@@ -171,9 +216,37 @@ document.addEventListener('DOMContentLoaded', function(){
             url: "https://github.com/nyanaung23/rock-paper-scissors"
         }
     ];
+    localStorage.setItem('projectData', JSON.stringify(projectData));
+}
 
+initializeLocalStorage();
+
+function loadRemoteData() {
+    fetch('https://my-json-server.typicode.com/Angelina-Yee/cse134b_hw5/projects')
+        .then(response => response.json())
+        .then(data=>{
+            displayProjects(data);
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+function loadLocalData(){
+    const data = JSON.parse(localStorage.getItem('projectData'));
+    if(data){
+        displayProjects(data);
+    }
+    else{
+        console.error('No local data found');
+    }
+}
+
+document.getElementById('loadLocal').addEventListener('click', loadLocalData);
+document.getElementById('loadRemote').addEventListener('click', loadRemoteData);
+
+function displayProjects(data){
     const mainSection = document.querySelector('main');
-    projectData.forEach(project => {
+    mainSection.innerHTML = '';
+    data.forEach(project => {
         const projectCard = document.createElement('project-card');
         projectCard.setAttribute('name', project.name);
         if(project.audioSrc){
@@ -193,4 +266,4 @@ document.addEventListener('DOMContentLoaded', function(){
         }
         mainSection.appendChild(projectCard);
     });
-});
+}
